@@ -1,0 +1,84 @@
+.appointments-page-container {
+  display: flex;
+  flex-direction: row;
+  background: none; /* Removes any background image */
+  background-color: #ffffff; /* Optional: Set to white or any other desired color */
+}
+
+.appointments-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.loading {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+}
+
+.error-container {
+  text-align: center;
+  color: red;
+}
+
+.error-message {
+  margin-bottom: 10px;
+}
+
+.retry-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.retry-button:hover {
+  background-color: #0056b3;
+}
+
+.appointments-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.appointment-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  width: 250px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.appointment-details {
+  display: flex;
+  align-items: center;
+}
+
+.appointment-avatar {
+  margin-right: 15px;
+}
+
+.avatar-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+.appointment-name {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.appointment-time {
+  font-size: 14px;
+  color: #555;
+}

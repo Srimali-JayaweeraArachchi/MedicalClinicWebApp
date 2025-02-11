@@ -1,0 +1,162 @@
+.signup-container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+  margin: 100px auto;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"], /* Added styling for phone number input */
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.checkbox-group {
+  text-align: left;
+  margin: 10px 0;
+}
+
+.checkbox-group label {
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.checkbox-group input {
+  margin-right: 5px;
+}
+
+.role-selection {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  gap: 10px;
+}
+
+.role-selection label {
+  font-size: 14px;
+  cursor: pointer;
+  color: #555;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.success {
+  color: green;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+p {
+  color: #555;
+  font-size: 14px;
+}
+
+p a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+/* For the select dropdown styling */
+select {
+  appearance: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 480px) {
+  .signup-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
+
+.role-selection {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.login-link {
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}

@@ -1,0 +1,219 @@
+/* Add a background image to the entire container */
+.clinical-home-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-image: url('../assets/login.JPG'); /* Adjust the path to match your file structure */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative; /* Ensure children are positioned relative to this container */
+  z-index: 0;
+}
+
+/* Ensure existing elements are positioned above the overlay */
+.sidebar,
+.main-content,
+.header,
+.content {
+  position: relative;
+  z-index: 1; /* Keeps content above the overlay */
+}
+
+/* Add a semi-transparent overlay */
+.clinical-home-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(71, 99, 99, 0.2); /* White overlay with 80% transparency */
+  z-index: -1; /* Place the overlay behind all content */
+}
+
+
+/* Sidebar styles */
+.sidebar {
+  width: 50px;
+  background-color: #f4f4f4;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #c8d2d9;
+  margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin: 10px 0;
+  font-size: 20px;
+  color: #0e0606;
+  cursor: pointer;
+}
+
+.sidebar nav ul li:hover {
+  color: #388de2;
+  font-weight: bold;
+}
+
+.main-content {
+  margin-left: 200px; /* Matches the new sidebar width */
+  padding: 25px;
+  font-size: 22px;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #2061db;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.header .profile {
+  font-size: 25px;
+  color: #4085de;
+}
+
+/* Content layout */
+.content {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+}
+.search-bar {
+  width: 650px;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Patient list styles */
+.patient-list {
+  width: 41%;
+  background-color: rgba(39, 150, 215, 0.4);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.patient-list h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #160a0a;
+}
+
+.patient-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.patient-list ul li {
+  list-style: none;
+  padding: 8px; /* Adjust padding as needed */
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #8ddaf4;
+  cursor: pointer;
+  width: 600px; /* Set a specific width or percentage */
+
+}
+
+.patient-list ul li:hover {
+  background-color: #89c1eb;
+}
+
+
+.patient-list ul li.selected {
+  background-color: #48b2e8;
+}
+
+.patient-list .see-all {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 15px;
+  font-size: 15px;
+  background-color: #0078d4;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.patient-list .see-all:hover {
+  background-color: #005bb5;
+}
+
+/* Fee details styles */
+.fee-details {
+  font-size: 20px;
+  flex: 1;
+  background-color: rgba(39, 150, 215, 0.4);
+  padding: 50px; /* Increased padding for more space around content */
+  border-radius: 10px;
+  box-shadow: 0 5px 5px rgba(30, 26, 26, 0.1);
+  max-width: 500px; /* Increased width of the fee details section */
+  margin: 0 auto; /* Centers the section horizontally */
+  height: fit-content; /* Adjusts the height to fit the content */
+}
+
+.fee-details input[type="text"] {
+  width: 100%;
+  padding: 12px; /* Increased padding for larger input size */
+  margin-bottom: 25px; /* Increased space between inputs */
+  font-size: 20px; /* Increased font size for inputs */
+  border: 1px solid #b83737;
+  border-radius: 6px;
+}
+
+.fee-details .fee-info h4 {
+  margin-bottom: 20px; /* Increased space below the title */
+  font-size: 25px; /* Larger font size for the patient's name */
+  color: #333;
+  font-weight: bold; /* Makes the title bold */
+}
+
+.fee-details .fee-info div {
+  margin: 20px 0; /* Increased space between fee rows */
+  font-size: 20px; /* Increased font size for fee labels */
+  font-weight: light bold;
+  color: #1a0a0a;
+  display: flex;
+  align-items: center; /* Aligns input fields with text */
+  justify-content: space-between; /* Adds space between labels and inputs */
+}
+
+.fee-details .fee-info div input {
+  width: 150px; /* Increased width of input fields */
+  padding: 8px; /* Increased padding for inputs */
+  font-size: 16px; /* Larger font size for inputs */
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+
+/* Loading and error styles */
+.error {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+}
+
